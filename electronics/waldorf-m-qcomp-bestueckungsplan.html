@@ -180,7 +180,7 @@ tr[data-v]{cursor:pointer} tr.on{background:rgba(120,160,255,.18)}
 Q-Pins: Ziffern in den Pads. Laut Datenblatt BC847B-7-F (Diodes Inc., SOT-23): Pin 1 = Basis, 2 = Emitter, 3 = Kollektor. Das Schaltplansymbol zeigt Pin 2 als Kollektor; die Umkehrung ist vom Autor gewollt, siehe Einbauhinweis. Die BOM des Autors (maffez, Rev 1) nennt SOT-23-SMD „BC447C“ – vermutlich ein Tippfehler für BC847C; die Anleitung sagt nur „BC847“. Dein BC847B-7-F passt. Widerstände 0805 sind bestätigt; die Anleitung nennt 2,2k, der Schaltplan 2k, beides geht. </p></section>
 <section class="card" style="margin-top:16px"><h2>Einbau pro Stimme (nach Anleitung von maffez, 15.05.2024)</h2>
 <table><tr><th>Testpunkt</th><th>Zielpunkt auf der Stimmenplatine des M</th></tr>
-<tr><td>TP25 … TP32 (Basis, oben) bzw. TP1 … TP8 (unten)</td><td>RCV-Leitung (Resonanz-CV vom DAC) auf der Eingangsseite des Serienwiderstands vor Q_CTRL (Pin 14) des SSI2144. Die Anleitung nennt hier 33k, der Schaltplan „MOD_IN_PLACE“ 3,3k. Am M nachmessen.</td></tr>
+<tr><td>TP25 … TP32 (Basis, oben) bzw. TP1 … TP8 (unten)</td><td>RCV-Leitung (Resonanz-CV vom DAC) auf der Eingangsseite des Serienwiderstands vor Q_CTRL (Pin 14) des SSI2144. Der Widerstand ist 33k (bestätigt; der Schaltplan „MOD_IN_PLACE“ zeigt fälschlich 3,3k).</td></tr>
 <tr><td>TP33, TP35 … (Pin 2)</td><td>Anleitung: Oszillatorseite („VCO MIX“) des 4,7k am Filtereingang. Mit dem BC847 liegt hier der Emitter, vom Autor so gewollt (siehe Hinweis unten).</td></tr>
 <tr><td>TP34, TP36 … (Pin 3)</td><td>Anleitung: Filterseite des 4,7k (SIG_IN+). Mit dem BC847 ist das der Kollektor.</td></tr>
 <tr><td>TP49</td><td>Masse, z. B. an einem der Metallabstandshalter</td></tr></table>
